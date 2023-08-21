@@ -1,0 +1,92 @@
+.footer
+    background: #2C2C2C
+    &_logo
+        @include _768
+            margin-bottom: 30px
+
+    &_content
+        display: flex
+        padding: 58px 0
+        justify-content: space-between
+        @include _768
+            flex-direction: column
+            align-items: center
+
+    &_copy
+        display: flex
+        justify-content: center
+        padding: 24px 0
+        border-top: 1px solid #ffffff14
+        color: #C8C8C880
+        font-size: 12px
+
+.footer-menu_title,
+.footer-contact_title,
+.footer-social_title
+    font-size: 16px
+    font-weight: 700
+    line-height: 20px
+    color: $white
+    margin-bottom: 25px
+    display: inline-block
+    
+
+.footer-menu
+    @include _880
+        display: none
+    &_list
+        display: flex
+        flex-direction: column
+        gap: 16px
+    &_item
+        transition: transform 0.3s
+    &_item:hover
+        transform: translateY(-4px)
+
+    &_item-link
+        font-family: TT Hoves
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: $white
+        text-decoration: none
+        
+
+
+.footer-contact
+    &_title
+        @include _768
+            display: none
+    &_list
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &>li
+            transition: transform 0.3s
+            &:hover
+                transform: translateY(-4px)
+    &_item-link
+        font-family: TT Hoves
+        font-size: 14px
+        font-weight: 500
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: $white
+        text-decoration: none
+        padding-left: 13px
+       
+
+.footer-social
+    &_list
+        display: flex 
+        gap: 40px
+    &_link
+        &>img
+            transition: .5s
+        &:hover>img
+            transform: rotateY(360deg)
+     
+   
+
+

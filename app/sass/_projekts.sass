@@ -1,0 +1,74 @@
+.projekts
+    margin-bottom: 120px
+    &_inner
+        display: flex
+        flex-direction: column
+
+    &_title
+        font-size: 64px
+        line-height: 1
+        font-weight: 300
+        color: $gray4
+        margin-bottom: 60px
+        @include _670
+            font-size: 40px
+            text-align: center 
+
+    &_item-wrap
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+
+    // &_item
+
+    &_btn
+        align-self: end
+        margin-top: 30px
+
+
+.projekts-item
+    position: relative
+    &:hover > .projekts-item_overlay
+        opacity: .8
+        z-index: 1
+    @include _1200
+        margin: 0 5px
+        
+    &_overlay
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: $gray
+        opacity: 0
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+        z-index: -1
+        transition: opacity 0.3s
+        
+
+    &_title
+        font-size: 64px
+        line-height: 1
+        font-weight: 700
+        color: $white
+        width: min-content
+        margin-bottom: 8px
+
+    
+
+.projekts-item_link
+    width: auto!important
+    height: auto!important
+    background: none
+    &>a
+        color: $white
+        text-decoration: none
+        font-size: 12px
+        line-height: 12px
+        letter-spacing: 2.4px
+        margin-right: 15px
+

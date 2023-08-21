@@ -1,0 +1,110 @@
+.header
+    position: sticky 
+    top: 0
+    left: 0
+    right: 0
+    background: white
+    z-index: 10000
+    &_inner
+        display: flex
+        min-height: 102px
+        justify-content: space-between
+        align-items: center
+//     &_logo
+.header_burger
+    min-width: 20px
+    height: 16px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    &>span
+        display: none
+        min-width: 20px
+        border: 2px solid #333333
+        position: relative
+        border-radius: 2px
+        z-index: 100
+        width: 30px
+        &.active
+            border: none
+        @include _960
+            display: block
+            &::after,&::before
+                content: ""
+                width: 30px
+                display: block
+                border: 2px solid #333333
+                border-radius: 2px
+                position: absolute
+                top: 7px
+                left: -2px
+                transform-origin: center
+                transition: 0.3s ease transform
+            &::before
+                top: -11px
+            &.active::after
+                transform: translate(0,-9px) rotate(315deg) 
+            &.active::before
+                transform:  translate(0,9px) rotate(45deg)   
+
+.header-menu
+    font-style: normal
+    @include _960
+        position: fixed
+        top: 102px
+        left: 0
+        right: 0
+        bottom: 0
+        transition: transform 0.3s
+        transform: translateX(120%)
+        background: $white
+        display: flex
+        justify-content: center
+        z-index: 10000000
+        &--active
+            transform: translateX(0%)
+    &_list
+        display: flex
+        gap: 60px
+        @include _960
+            flex-direction: column
+            align-items: center
+            justify-content: center
+    &_item-link
+        color: $gray
+        text-transform: uppercase
+        text-decoration: none
+        @include _960
+            z-index: 1000000
+            position: relative
+          
+
+    &_item
+        font-family: 'TT Hoves'
+        font-weight: 300
+        font-size: 12px
+        position: relative
+        cursor: pointer
+        &::after,&::before
+                content: ""
+                width: 0%
+                height: 1px
+                display: block
+                position: absolute
+                bottom: -5px
+                background: $gray
+                transition: width 0.3s
+        &::before
+            bottom: 0
+            top: -5px
+        &:hover
+            &::after,&::before
+                width: 100%
+        @include _960
+            font-size: 40px
+
+
+               
+
+

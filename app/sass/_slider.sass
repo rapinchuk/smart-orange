@@ -1,0 +1,141 @@
+.slider
+    position: relative
+ 
+    &_control-wrap
+        position: absolute
+        bottom: 107px
+        z-index: 1000
+        @include _1050
+            bottom: 0
+            left: 60px
+        @include _768
+            left: 30px
+        @include _560
+            left: 50%
+            transform: translateX(-50%)
+            bottom: -98px
+    &_btns
+        display: flex
+        gap: 23px
+    &_btn
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 53px
+        height: 53px
+        border: 1px solid #F2F2F2
+        background: #ffffff
+        transition: background 0.3s
+        &:hover> .slider_btn-icon
+            transform: scale(1.2)
+        &>img
+            transition: 0.3s
+        @include _768
+            width: 46px
+            height: 46px
+
+
+    &_btn:hover
+        background: #F2F2F2
+        cursor: pointer
+    // &_btn-prev
+
+
+    // &_btn-next
+
+    &_count
+        font-size: 24px 
+        line-height: 1
+        color: $gray4
+        font-weight: 300
+        display: flex
+        gap: 88px
+        margin-top: 94px
+        justify-content: center
+        @include _1050
+            margin-top: 66px
+        @include _768
+            font-size: 16px
+            gap: 40px
+        @include _560
+            margin-top: 28px
+        &>span
+            position: relative
+        &>span:first-child::after
+            content: ""
+            display: block
+            width: 43px
+            border: 2px solid #E0E0E0
+            position: absolute
+            right: -65px
+            top: 50%
+            transform: rotate(135deg)translateY(-50%)
+            @include _768
+                left: 50%
+                right: 0
+                width: 30px
+                transform: translate(33%,-50%)rotate(135deg)
+
+            
+// // .slide_wrap
+// //     position: relative
+.slide
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    @include _1050
+            justify-content: space-around
+    @include _768
+        gap: 30px
+
+    // position: absolute
+    // top: 0
+    // left: 0
+    // right: 0
+    // bottom: 0
+    // &--active
+    //     position: relative
+
+    &_text
+        font-size: 64px 
+        @include _768
+            font-size: 48px
+        @include _560
+            position: absolute
+            z-index: 2
+            top: 50%
+            transform: translateY(-50%)
+        &>span
+            
+            line-height: 1
+            color: $gray4
+            font-weight: 300
+        &>p
+            
+            line-height: 1
+            color: $gray
+            font-weight: 700
+
+    &_img-wrap
+        position: relative
+        max-width: 770px
+        @include _1050
+            max-width: 550px
+        @include _880
+            max-width: 450px
+        &>img
+            @include _560
+                filter: brightness(0.5)
+
+.slide_btn
+    position: absolute
+    bottom: 0
+    left: 0
+.slide_btn > img
+    display: initial
+
+
+.slick-initialized .slick-slide
+    @include _768
+        align-items: flex-start
+
